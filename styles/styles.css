@@ -70,7 +70,6 @@ section {
     border-radius: 6px;
     background-color: #3b2418;
     height: 650px;
-    text-align: left;
 }
 
 section h1 {
@@ -80,14 +79,17 @@ section h1 {
     text-shadow: 2px 2px #3b2418, 0 0 8px #ffcc00;
     margin-bottom: 25px;
     margin-top: 15px;
-    letter-spacing: 2px;
+    /*letter-spacing: 2px;*/
 }
 
 section p {
     font-size: 10px;
-    margin-left: 25px;
+    text-indent: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
     line-height: 1.6;
     color: #fff1c1;
+    text-align: justify;
     text-shadow: 1px 1px #2a1608;
 }
 
@@ -98,6 +100,21 @@ section ul {
     line-height: 1.6;
     color: #fff1c1;
     text-shadow: 1px 1px #2a1608;
+}
+
+section a {
+    color: #fff6db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    background: #6b3d1a;
+    padding: 4px 10px;
+    border: 2px solid #d2a679;
+    border-radius: 2px;
+}
+
+section a:hover {
+    background: #8c5123;
 }
 
 aside {
@@ -168,6 +185,13 @@ footer a {
 
 footer a:hover {
     background: #8c5123;
+}
+
+#map {
+    height: 500px;
+    margin: 30px;
+    border: 4px solid #d2a679;
+    border-radius: 4px;
 }
 
 /* АНИМАЦИЯ МЕРЦАНИЯ */

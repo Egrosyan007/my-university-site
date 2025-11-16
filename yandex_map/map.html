@@ -6,18 +6,39 @@
     <meta charset="utf-8">
     <title>Pixel Indie Site — Яндекс карта</title>
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=56880a29-acc8-4d56-a893-833ff0175a27" type="text/javascript"></script>
+
+    <script>
+        ymaps.ready(init);
+
+        function init() {
+            var map = new ymaps.Map("map", {
+                center: [48.012015, 37.882214], // Центр карты
+                zoom: 1
+            });
+
+            // Создаем маршрут
+            var multiRoute = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    [47.969465, 37.924104], // Школа
+                    [47.994061, 37.804125] // ДонНТУ
+                ],
+                params: {
+                    results: 1, // Устанавливаем количество маршрутов
+                    routingMode: 'driving'
+                }
+            }, {
+                boundsAutoApply: true // Автоматически подстраивать границы карты
+            });
+
+            // Добавляем маршрут на карту
+            map.geoObjects.add(multiRoute);
+        }
+    </script>
 
     <link rel="icon" href="../upictures/icon.png">
     <link href="https://fonts.cdnfonts.com/css/press-start-2p" rel="stylesheet">
     <link href="../styles/styles.css" rel="stylesheet">
-
-    <script type="text/javascript">
-        var map = new ymaps.Map("map", {
-            center: [55.76, 37.64],
-            zoom: 7
-        });
-    </script>
     
 </head>
 
@@ -34,14 +55,12 @@
     <main>
         <section>
             <h1 class="glow">ЯНДЕКС КАРТА</h1>
-            <p>
-                На этой странице будет расположена 
+            <p> 
                 <span style="color:#ff0066;">Яндекс карта</span> 
-                пути от моей школы до первого корпуса ДонНТУ.
+                с путём от моей школы до первого корпуса ДонНТУ.
             </p>
 
-            <div id="map" style="width: 600; height: 400px;"></div>
-
+            <div id="map"></div>
         </section>
     </main>
 
