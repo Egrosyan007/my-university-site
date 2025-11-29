@@ -117,6 +117,10 @@ section ul {
     text-shadow: 1px 1px #2a1608;
 }
 
+section a {
+    color: #ff0066;
+}
+
 aside {
     border: 4px solid #d2a679;
     padding-top: 35px;
@@ -138,8 +142,8 @@ aside h1 {
 }
 
 aside p {
-    margin-left: 25px;
     margin-right: 25px;
+    margin-left: 25px;
     font-size: 10px;
     color: #fff1c1;
     text-shadow: 1px 1px #2a1608;
@@ -150,7 +154,6 @@ aside ul {
     list-style: none;
     font-size: 10px;
     margin-left: 25px;
-    line-height: 1.6;
     color: #fff1c1;
     text-shadow: 1px 1px #2a1608;
 }
@@ -163,19 +166,25 @@ aside img {
     height: 225px;
 }
 
-aside a {
+aside .link {
     color: #fff6db;
     text-decoration: none;
     margin: 0 10px;
-    font-size: 14px;
     background: #6b3d1a;
     padding: 4px 10px;
-    border: 2px solid #d2a679;
+    border: 2.5px solid #d2a679;
     border-radius: 2px;
+    font-size: 14px;
 }
 
-aside a:hover {
+aside .link:hover {
     background: #8c5123;
+}
+
+aside a {
+    font-size: 10px;
+    color: #ff0066;
+    line-height: 2;
 }
 
 /* ССЫЛКИ НА ДРУГИЕ САЙТЫ */
@@ -207,6 +216,12 @@ footer a:hover {
     margin: 30px;
     border: 4px solid #d2a679;
     border-radius: 4px;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
 }
 
 /* АНИМАЦИЯ МЕРЦАНИЯ */
