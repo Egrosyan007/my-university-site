@@ -270,6 +270,12 @@ footer a:hover {
     top: 40px;
 }
 
+#description {
+    margin: 10px 180px;
+    text-indent: 35px;
+    text-align: justify;
+}
+
 /* АНИМАЦИЯ МЕРЦАНИЯ */
 @keyframes pixelGlow {
     0%, 100% {

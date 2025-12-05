@@ -28,7 +28,7 @@
             <h2>Ввод значений:</h2>
             <div class="variables">
                 <p>Отношения</p>
-                <input type="number" id="relationships" class="inputbox" placeholder="Отношения от 0.1 до 1" step="0.1" min="0.1" max="1">
+                <input type="number" id="relationships" class="inputbox" placeholder="Отношения от 0.2 до 1" step="0.1" min="0.2" max="1">
                 <p>Мотивация</p>
                 <input type="number" id="motivation" class="inputbox" placeholder="Мотивация от 0.1 до 1" step="0.1" min="0.1" max="1">
                 <p>Компьютерные игры</p>
@@ -52,7 +52,9 @@
             <button id="resButton">Стереть значения</button>
         </section>
 
-        <aside style="width: 1050px; height: 750px;">
+        <aside style="width: 1050px; height: 850px;">
+            <h1 class="glow" style="font-size: 20px;">Что это такое?</h1>
+            <p id="description">Данная формула представляет из себя оценку моего ежедневного состояния, и является отношением положительных и отрицательных характеристик, оказывающих влияние на мою повседневную жизнь. Каждая из характеристик определяется как некоторый коэффициент, а их совокупности вычисляются благодаря математическим формулам.</p>
             <h1 class="glow" style="font-size: 20px;">Графики</h1>
             <div class="graphic">
                 <br>
@@ -89,7 +91,7 @@
             const baseEnergy = 100;
             
             // Проверяем введены ли значения верно
-            if (isNaN(relationships) || relationships < 0.1 || relationships > 1 ||
+            if (isNaN(relationships) || relationships < 0.2 || relationships > 1 ||
                 isNaN(motivation) || motivation < 0.1 || motivation > 1 ||
                 isNaN(pcgames) || pcgames < 0.1 || pcgames > 0.7 ||
                 isNaN(hobbie) || hobbie < 0.1 || hobbie > 0.8 ||
